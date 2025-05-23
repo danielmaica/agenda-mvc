@@ -1,0 +1,54 @@
+﻿@model Contato
+
+@{
+    ViewData["Title"] = "Excluir contato";
+}
+
+<div>
+    <h1 class="text-danger">Deseja realmente Excluir este contato? Essa operação é irreversível</h1>
+
+    <hr>
+
+    <div class="">
+        <dl class=""></dl>
+        <div class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Nome)
+            </dt>
+            <dt class="col-sm-2">
+                @Html.DisplayFor(model => model.Nome)
+            </dt>
+        </div>
+        <div class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Telefone)
+            </dt>
+            <dt class="col-sm-2">
+                @Html.DisplayFor(model => model.Telefone)
+            </dt>
+        </div>
+        <div class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Email)
+            </dt>
+            <dt class="col-sm-2">
+                @Html.DisplayFor(model => model.Email)
+            </dt>
+        </div>
+        <div class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Ativo)
+            </dt>
+            <dt class="col-sm-2">
+                @Html.DisplayFor(model => model.Ativo)
+            </dt>
+        </div>
+        </dl>
+    </div>
+</div>
+<div class="col-md-4 d-flex justify-content-between aling-items-center">
+    <form asp-action="Excluir">
+        <button type="submit" value="Excluir" class="btn btn-danger">Excluir</button>
+    </form>
+    <a asp-action="Index">Voltar</a>
+</div>

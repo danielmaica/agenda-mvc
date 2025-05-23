@@ -1,0 +1,56 @@
+﻿@model Contato
+
+@{
+    ViewData["Title"] = "Detalhes do contato";
+}
+
+<div>
+    <h1>Detalhes</h1>
+
+    <hr>
+
+    <div class="">
+        <dl class="">
+            <div class="row">
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Nome)
+                </dt>
+                <dt class="col-sm-2">
+                    @Html.DisplayFor(model => model.Nome)
+                </dt>
+            </div>
+            <div class="row">
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Telefone)
+                </dt>
+                <dt class="col-sm-2">
+                    @Html.DisplayFor(model => model.Telefone)
+                </dt>
+            </div>
+            <div class="row">
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Email)
+                </dt>
+                <dt class="col-sm-2">
+                    @Html.DisplayFor(model => model.Email)
+                </dt>
+            </div>
+            <div class="row">
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Ativo)
+                </dt>
+                <dt class="col-sm-2">
+                    @Html.DisplayFor(model => model.Ativo)
+                </dt>
+            </div>
+        </dl>
+    </div>
+</div>
+<div class="col-md-4 d-flex justify-content-between aling-items-center">
+    <a asp-action="Editar" asp-route-id="@Model.Id">
+        <button class="btn btn-success" type="button">
+            Editar
+        </button>
+    </a>
+    <a asp-action="Index">Voltar</a>
+</div>
